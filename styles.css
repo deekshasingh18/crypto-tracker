@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fb;
+  color: #1a1a1a;
+}
+
+/* Wrapper for horizontal scrolling */
+.table-wrapper, .overflow-x-auto {
+  padding: 20px;
+  overflow-x: auto;
+}
+
+/* Crypto Table */
+.crypto-table {
+  width: 100%;
+  min-width: 1000px; /* ensures table doesn't shrink too much */
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Table Headers and Cells */
+.crypto-table th,
+.crypto-table td {
+  padding: 16px;
+  text-align: center;
+  font-size: 14px;
+  border-bottom: 1px solid #e0e6ed;
+}
+
+/* Table Head background */
+.crypto-table thead {
+  background-color: #e8edf3;
+}
+
+/* Row Hover */
+.crypto-table tbody tr:hover {
+  background-color: #f0f7ff;
+  box-shadow: 0 2px 8px rgba(0, 0, 255, 0.1);
+}
+
+/* Crypto Logo Images */
+.crypto-table img {
+  height: 24px;
+  width: 24px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* Price Change Colors */
+.positive {
+  color: #28a745;
+  font-weight: 500;
+}
+
+.negative {
+  color: #dc3545;
+  font-weight: 500;
+}
+
+/* Dropdown toggle button */
+.sort-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sort-button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Dropdown menu container */
+.sort-menu {
+  position: absolute;
+  margin-top: 4px;
+  width: 200px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+/* Stack options vertically */
+.sort-menu .sort-option {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  text-align: left;
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 14px;
+  transition: background-color 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+/* Round top & bottom options */
+.sort-menu .sort-option:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.sort-menu .sort-option:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* Hover state: light purple */
+.sort-menu .sort-option:hover {
+  background-color: #f3e8ff;  /* light purple */
+  color: #6b21a8;            /* dark purple text */
+}
+
+/* Active selection */
+.sort-menu .sort-option.active {
+  background-color: #e9d5ff;  /* slightly deeper purple */
+  color: #581c87;
+}
